@@ -7,19 +7,12 @@ int main(int argc, char** argv) {
 setlocale(LC_ALL,"");
 int notas[3];
 float media;
+
 printf("\t\t Programa de notas escolares 2021!");
-
-printf("\n\n Entre com a nota do primeiro bimestre: \n");
-scanf("%d", &notas[0]);
-
-printf("\n\n Entre com a nota do segundo bimestre: \n");
-scanf("%d", &notas[1]);
-
-printf("\n\n Entre com a nota do terceiro bimestre: \n");
-scanf("%d", &notas[2]);
-
-printf("\n\n Entre com a nota do quato bimestre: \n");
-scanf("%d", &notas[3]);
+for(int i = 1; i <= 4; i++){
+	printf("\n\n Entre com a nota do bimestre: %d\n", i);
+	scanf("%d", &notas[i-1]);
+}
 
 media = (notas[0] + notas[1] + notas[2] + notas[3]) / 4;
 
